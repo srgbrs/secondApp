@@ -1,6 +1,7 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const exphbs = require('express-handlebars')
+const listRoutes = require('./routes/list')
 
 const PORT = process.env.PORT || 3000
 
@@ -14,15 +15,18 @@ app.engine('hbs', hbs.engine)
 app.set('view engine', 'hbs')
 app.set('views','views')
 
+app.use(listRoutes)
+
 async function start() {
     try {
-        await mongoose.connect('', { //подключение базы
+        await mongoose.connect('mongodb+srv://sergey:12345@cluster0-6l2ws.mongodb.net/list', { //подключение базы
+            useUnifiedTopology: true,
             useNewUrlParser: true,
             useFindAndModify: false
         })
         app.listen(PORT, () => { //запуск сервера
             console.log('server has been started')
-        }) 
+        })  
 
     } catch(e) {
         console.log(e)
