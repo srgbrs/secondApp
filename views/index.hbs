@@ -1,13 +1,21 @@
+<style type="text/css">
+   label { 
+    font-size: 20px; 
+    color: black;
+   }
+  </style>
+
 <h2>Список студентов</h2>
 
+
 {{#if list.length}}
-<ul>
+<ul class>
     {{#each list}}
         <li class="list">
             <label>
                 <span> {{title}} </span>
 
-                <button class="btn btn-small">Сохранить</button>
+                {{!-- <button class="btn btn-small">Сохранить</button> --}}
             </label>
         </li>
 

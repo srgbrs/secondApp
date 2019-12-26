@@ -1,11 +1,54 @@
+
+
 <form action="/create" method="POST">
+
+    <style type="text/css">
+    input{
+          width: 30%;
+          height: 30px;
+          border-radius: 5px;
+          border: blue solid 4px;
+          background-color: rgb(219, 219, 255);
+          font-size: 15pt;
+          text-align: center;
+          font: bold arial, sans-serif;
+          
+      }
+    </style>
     <h2>Добавить студента</h2>
 
-    <div class="input-field">
+    <div class="row">
+    <div class="input-field col s8">
         <input type="text" name="title">
         <label>ФИО студента</label>
     </div>
 
+    <div class="input-field col s4">
+        <input type="text" name="mark">
+        <label>Оценка</label>
+    </div>
+    </div>
+
     <button type="submit" class="btn blue-grey lighten-3">Добавить</button>
 
+    {{!-- <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+          <label for="first_name">First Name</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="last_name" type="text" class="validate">
+          <label for="last_name">Last Name</label>
+        </div>
+      </div>
+      
+      
+      </div>
+    </form>
+  </div> --}}
+
 </form>
+
+  

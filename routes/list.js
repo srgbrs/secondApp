@@ -21,4 +21,14 @@ router.get('/create', (req,res)=>{
 
 })
 
+router.post('/create', async (req,res) => {
+    const list = new List({
+        title: req.body.title
+    })
+    await list.save();
+    res.redirect('/')
+})
+
+
+
 module.exports = router // экспорт команды
