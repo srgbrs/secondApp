@@ -16,7 +16,6 @@ app.set('view engine', 'hbs')
 app.set('views','views')
 
 app.use(express.urlencoded({ extended: true}))
-// app.use(express.static())
 
 app.use(listRoutes)
 

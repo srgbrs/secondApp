@@ -19,11 +19,6 @@ router.post('/', (req,res) => { // удаление базы
         console.log('collection removed') 
      });
 
-    // const list = new List({
-    //     title: req.body.title,
-    //     mark: req.body.mark,
-    // })
-    // await list.save();
     res.redirect('/')
 })
 
@@ -43,7 +38,5 @@ router.post('/create', async (req,res) => {
     await list.save();
     res.redirect('/')
 })
-
-
 
 module.exports = router // экспорт команды
