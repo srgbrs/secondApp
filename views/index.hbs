@@ -1,1 +1,18 @@
 <h2>Список студентов</h2>
+
+{{#if list.length}}
+<ul>
+    {{#each list}}
+        <li class="list">
+            <label>
+                <span> {{title}} </span>
+
+                <button class="btn btn-small">Сохранить</button>
+            </label>
+        </li>
+
+    {{/each}}
+</ul>
+{{else}}
+<p>Нет студентов в списке</p>
+{{/if}}
