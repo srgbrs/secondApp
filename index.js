@@ -23,7 +23,7 @@ app.use(listRoutes)
 async function start() {
     try {
         await mongoose.connect('mongodb+srv://sergey:12345@cluster0-6l2ws.mongodb.net/list', { //подключение базы
-            useUnifiedTopology: true,
+            useUnifiedTopology: false, //fix
             useNewUrlParser: true,
             useFindAndModify: false
         })
