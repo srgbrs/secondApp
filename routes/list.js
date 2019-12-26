@@ -23,7 +23,8 @@ router.get('/create', (req,res)=>{
 
 router.post('/create', async (req,res) => {
     const list = new List({
-        title: req.body.title
+        title: req.body.title,
+        mark: req.body.mark
     })
     await list.save();
     res.redirect('/')

@@ -4,6 +4,10 @@ const schema = new Schema({
     title: {
     type: String,
     required: true
+    },
+    mark: {
+    type: String,
+    required: true
     }
 
 })
