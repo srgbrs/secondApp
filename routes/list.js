@@ -13,6 +13,20 @@ router.get('/', async (req, res) => {
     })
 })
 
+router.post('/', (req,res) => { // удаление базы
+
+    List.deleteMany({}, function(err) { 
+        console.log('collection removed') 
+     });
+
+    // const list = new List({
+    //     title: req.body.title,
+    //     mark: req.body.mark,
+    // })
+    // await list.save();
+    res.redirect('/')
+})
+
 router.get('/create', (req,res)=>{
     res.render('create', {
         title: 'Добавить студента',
@@ -24,7 +38,7 @@ router.get('/create', (req,res)=>{
 router.post('/create', async (req,res) => {
     const list = new List({
         title: req.body.title,
-        mark: req.body.mark
+        mark: req.body.mark,
     })
     await list.save();
     res.redirect('/')

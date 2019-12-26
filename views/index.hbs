@@ -1,3 +1,5 @@
+<form action="/" method="POST">
+
 <style type="text/css">
    label { 
     font-size: 20px; 
@@ -6,6 +8,7 @@
   </style>
 
 <h2>Список студентов</h2>
+
 
 
 {{#if list.length}}
@@ -21,6 +24,9 @@
 
     {{/each}}
 </ul>
+<button type="submit" class="btn btn-small">Очистить</button>
 {{else}}
 <p>Нет студентов в списке</p>
 {{/if}}
+
+</form>
