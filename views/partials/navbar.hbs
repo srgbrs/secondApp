@@ -1,10 +1,37 @@
-<nav class="red darken-3">
+{{!-- <nav class="red darken-3">
     <div class="nav-wrapper">
-      <a href="/" class="brand-logo">List</a>
+      <a href="/" class="brand-logo">Список студентов</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
 
-        <li><a href="/">List</a></li>
-        <li><a href="/create">Create</a></li>
+
+        {{#if isIndex}}
+        <li class="active"><a href="/">Список студентов</a></li>
+        {{else}}
+        <li><a href="/">Список студентов</a></li>
+        {{/if}}
+
+        {{#if isCreate}}
+        <li class="active"><a href="/create">Добавить студента</a></li>
+        {{else}}
+        <li><a href="/create">Добавить студента</a></li>
+        {{/if}}
+
+        
+
+      </ul>
+    </div>
+  </nav> --}}
+
+
+<nav class="red darken-3">
+    <div class="nav-wrapper">
+      <a href="/" class="brand-logo"></i>Журнал</a>
+      <ul class="right hide-on-med-and-down">
+
+
+        <li><a href="/"><i class="material-icons">format_align_left</i></a></li>
+        <li><a href="/create"><i class="material-icons">add</i></a></li>
+
 
       </ul>
     </div>
