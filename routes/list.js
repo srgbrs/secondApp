@@ -34,6 +34,7 @@ router.post('/create', async (req,res) => {
     const list = new List({
         title: req.body.title,
         mark: req.body.mark,
+        date: new Date
     })
     await list.save();
     res.redirect('/')

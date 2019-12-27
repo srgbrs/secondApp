@@ -8,6 +8,10 @@ const schema = new Schema({
     mark: {
     type: String,
     required: true
+    },
+    date: {
+        type:Date,
+        required:true
     }
 
 })
